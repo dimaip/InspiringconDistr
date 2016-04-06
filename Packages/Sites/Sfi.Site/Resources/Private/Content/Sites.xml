@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+ <site name="Site" state="1" siteResourcesPackageKey="Sfi.Site" siteNodeName="site">
+  <nodes formatVersion="2.0">
+   <node identifier="5b6a4c0b-d1d8-4353-8351-3f6847017b25" nodeName="site">
+    <variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos:Shortcut" version="2" removed="" hidden="" hiddenInIndex="">
+     <dimensions/>
+     <accessRoles __type="array"/>
+     <creationDateTime __type="object" __classname="DateTime">2016-04-05T17:55:41+00:00</creationDateTime>
+     <lastModificationDateTime __type="object" __classname="DateTime">2016-04-06T13:56:42+00:00</lastModificationDateTime>
+     <lastPublicationDateTime __type="object" __classname="DateTime">2016-04-06T13:56:41+00:00</lastPublicationDateTime>
+     <properties>
+      <title __type="string">Home</title>
+      <uriPathSegment __type="string">home</uriPathSegment>
+      <targetMode __type="string">firstChildNode</targetMode>
+     </properties>
+    </variant>
+    <node identifier="193fd111-7dbc-4d10-9be4-75c4f9e276e2" nodeName="node-57042402bec68">
+     <variant sortingIndex="200" workspace="live" nodeType="Psmb.Reveal:Presentation" version="2" removed="" hidden="" hiddenInIndex="">
+      <dimensions/>
+      <accessRoles __type="array"/>
+      <creationDateTime __type="object" __classname="DateTime">2016-04-05T23:45:54+00:00</creationDateTime>
+      <lastModificationDateTime __type="object" __classname="DateTime">2016-04-06T00:01:17+00:00</lastModificationDateTime>
+      <lastPublicationDateTime __type="object" __classname="DateTime">2016-04-06T00:01:17+00:00</lastPublicationDateTime>
+      <properties>
+       <uriPathSegment __type="string">pacman</uriPathSegment>
+       <title __type="string">Pacman</title>
+      </properties>
+     </variant>
+     <node identifier="70d7b500-6a88-407f-a3c8-280d60dcad77" nodeName="node-57042412367ac">
+      <variant sortingIndex="100" workspace="live" nodeType="Psmb.Reveal:Slide" version="2" removed="" hidden="" hiddenInIndex="">
+       <dimensions/>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2016-04-05T23:46:10+00:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2016-04-06T00:01:17+00:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2016-04-06T00:01:17+00:00</lastPublicationDateTime>
+       <properties>
+        <uriPathSegment __type="string">1</uriPathSegment>
+        <title __type="string">1</title>
+       </properties>
+      </variant>
+      <node identifier="61bb14b4-b586-5a75-5789-634be2107faf" nodeName="main">
+       <variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+        <dimensions/>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2016-04-05T23:46:10+00:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2016-04-06T00:01:17+00:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2016-04-06T00:01:17+00:00</lastPublicationDateTime>
+        <properties/>
+       </variant>
+       <node identifier="55c1043c-3981-459d-8f88-aac9ba545c31" nodeName="node-57042790c3a27">
+        <variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos.NodeTypes:Headline" version="6" removed="" hidden="" hiddenInIndex="">
+         <dimensions/>
+         <accessRoles __type="array"/>
+         <creationDateTime __type="object" __classname="DateTime">2016-04-06T00:01:04+00:00</creationDateTime>
+         <lastModificationDateTime __type="object" __classname="DateTime">2016-04-06T13:54:18+00:00</lastModificationDateTime>
+         <lastPublicationDateTime __type="object" __classname="DateTime">2016-04-06T13:54:18+00:00</lastPublicationDateTime>
+         <properties>
+          <title __type="string">&lt;h1&gt;Hello world!&lt;/h1&gt;</title>
+         </properties>
+        </variant>
+       </node>
+       <node identifier="81de5fd7-6edc-440d-abdb-5ba368331894" nodeName="node-5704eaaaa0b3f">
+        <variant sortingIndex="150" workspace="live" nodeType="TYPO3.Neos.NodeTypes:Text" version="8" removed="" hidden="" hiddenInIndex="">
+         <dimensions/>
+         <accessRoles __type="array"/>
+         <creationDateTime __type="object" __classname="DateTime">2016-04-06T13:53:30+00:00</creationDateTime>
+         <lastModificationDateTime __type="object" __classname="DateTime">2016-04-06T13:54:18+00:00</lastModificationDateTime>
+         <lastPublicationDateTime __type="object" __classname="DateTime">2016-04-06T13:54:18+00:00</lastPublicationDateTime>
+         <properties>
+          <text __type="string">&lt;p&gt;These slides are actually made in Neos!&lt;/p&gt;</text>
+         </properties>
+        </variant>
+       </node>
+      </node>
+     </node>
+     <node identifier="3eddd10b-fd67-4680-b284-f53e9d50eee9" nodeName="node-57042c1abea48">
+      <variant sortingIndex="150" workspace="live" nodeType="Psmb.Reveal:Slide" version="3" removed="" hidden="" hiddenInIndex="">
+       <dimensions/>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2016-04-06T00:20:26+00:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2016-04-06T00:20:51+00:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2016-04-06T00:20:51+00:00</lastPublicationDateTime>
+       <properties>
+        <uriPathSegment __type="string">2</uriPathSegment>
+        <title __type="string">2</title>
+       </properties>
+      </variant>
+      <node identifier="c99d2762-57e5-1f35-4768-c15d4b65afa7" nodeName="main">
+       <variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+        <dimensions/>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2016-04-06T00:20:26+00:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2016-04-06T00:20:51+00:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2016-04-06T00:20:51+00:00</lastPublicationDateTime>
+        <properties/>
+       </variant>
+       <node identifier="331d941f-fa31-4cc4-bc6b-1446684d4347" nodeName="node-57042c2258e9b">
+        <variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos.NodeTypes:Headline" version="5" removed="" hidden="" hiddenInIndex="">
+         <dimensions/>
+         <accessRoles __type="array"/>
+         <creationDateTime __type="object" __classname="DateTime">2016-04-06T00:20:34+00:00</creationDateTime>
+         <lastModificationDateTime __type="object" __classname="DateTime">2016-04-06T00:20:51+00:00</lastModificationDateTime>
+         <lastPublicationDateTime __type="object" __classname="DateTime">2016-04-06T00:20:51+00:00</lastPublicationDateTime>
+         <properties>
+          <title __type="string">&lt;h2&gt;Another slide&lt;/h2&gt;</title>
+         </properties>
+        </variant>
+       </node>
+       <node identifier="d5340d03-96d7-4a36-8511-3db77b8ca789" nodeName="node-5704eac70bc07">
+        <variant sortingIndex="150" workspace="live" nodeType="TYPO3.Neos.NodeTypes:Text" version="8" removed="" hidden="" hiddenInIndex="">
+         <dimensions/>
+         <accessRoles __type="array"/>
+         <creationDateTime __type="object" __classname="DateTime">2016-04-06T13:53:59+00:00</creationDateTime>
+         <lastModificationDateTime __type="object" __classname="DateTime">2016-04-06T13:54:18+00:00</lastModificationDateTime>
+         <lastPublicationDateTime __type="object" __classname="DateTime">2016-04-06T13:54:18+00:00</lastPublicationDateTime>
+         <properties>
+          <text __type="string">&lt;p&gt;A lot more awesome stuff is coming!&lt;/p&gt;</text>
+         </properties>
+        </variant>
+       </node>
+      </node>
+     </node>
+    </node>
+   </node>
+  </nodes>
+ </site>
+</root>

@@ -1,0 +1,50 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+
+<head>
+	<f:section name="headSection">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<link rel="stylesheet" href="{f:uri.resource(path: 'revealjs/css/reveal.css', package: 'Psmb.Reveal')}">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="{f:uri.resource(path: 'revealjs/lib/css/zenburn.css', package: 'Psmb.Reveal')}">
+	</f:section>
+</head>
+<body>
+	<f:section name="bodySection">
+	    	<script src="{f:uri.resource(path: 'revealjs/lib/js/head.min.js', package: 'Psmb.Reveal')}"></script>
+	    	<script src="{f:uri.resource(path: 'revealjs/js/reveal.js', package: 'Psmb.Reveal')}"></script>
+
+	    	<script>
+	    		// Full list of configuration options available at:
+	    		// https://github.com/hakimel/reveal.js#configuration
+				function initReveal() {
+		    		Reveal.initialize({
+		    			controls: false,
+		    			progress: true,
+		    			history: false,
+		    			center: true,
+		    			transition: 'slide', // none/fade/slide/convex/concave/zoom
+		    			// Optional reveal.js plugins
+		    			dependencies: [
+		    				{ src: '/_Resources/Static/Packages/Psmb.Reveal/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+		    				{ src: '/_Resources/Static/Packages/Psmb.Reveal/revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		    				{ src: '/_Resources/Static/Packages/Psmb.Reveal/revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		    				{ src: '/_Resources/Static/Packages/Psmb.Reveal/revealjs/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+		    				{ src: '/_Resources/Static/Packages/Psmb.Reveal/revealjs/plugin/zoom-js/zoom.js', async: true },
+		    				{ src: '/_Resources/Static/Packages/Psmb.Reveal/revealjs/plugin/notes/notes.js', async: true }
+		    			]
+		    		});
+				}
+				initReveal();
+				if (typeof document.addEventListener === 'function') {
+					document.addEventListener('Neos.PageLoaded', function(event) {
+						initReveal();
+					}, false);
+				}
+
+	    	</script>
+	</f:section>
+</body>

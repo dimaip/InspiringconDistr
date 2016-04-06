@@ -1,0 +1,25 @@
+'Psmb.Reveal:Presentation':
+  superTypes:
+    - 'TYPO3.Neos:Document'
+  ui:
+    label: 'Presentation'
+  properties:
+    title:
+      type: string
+      ui:
+        label: 'Title'
+        inspector:
+          group: document
+  constraints:
+    nodeTypes:
+      'Psmb.Reveal:Slide': TRUE
+      'TYPO3.Neos:Document': FALSE
+
+'Psmb.Reveal:Slide':
+  superTypes:
+    - 'TYPO3.Neos:Document'
+  ui:
+    label: 'Slide'
+  childNodes:
+    main:
+      type: 'TYPO3.Neos:ContentCollection'

@@ -1,0 +1,54 @@
+prototype(Psmb.Reveal:Slide) < prototype(TYPO3.TypoScript:Tag) {
+    tagName = 'section'
+    content = TYPO3.Neos:ContentCollection {
+        nodePath = 'main'
+    }
+}
+
+prototype(Psmb.Reveal:Presentation) < prototype(TYPO3.TypoScript:Collection) {
+    itemRenderer = Psmb.Reveal:Slide
+    collection = ${q(site).find('[instanceof Psmb.Reveal:Slide]').get()}
+    itemName = 'node'
+}
+
+prototype(Psmb.Reveal:Root) < prototype(TYPO3.Neos:Page) {
+	head {
+		stylesheets.reveal = TYPO3.TypoScript:Template {
+			templatePath = 'resource://Psmb.Reveal/Private/Partials/Resources.html'
+			sectionName = 'headSection'
+		}
+        stylesheets.theme = TYPO3.TypoScript:Tag {
+            tagName = 'link'
+            attributes {
+                rel = 'stylesheet'
+                href = TYPO3.TypoScript:ResourceUri {
+                    path = 'resource://Psmb.Reveal/Public/revealjs/css/theme/simple.css'
+                }
+            }
+            @position = 'after reveal'
+        }
+	}
+	body {
+		templatePath = 'resource://Psmb.Reveal/Private/Templates/Root.html'
+		partialRootPath = 'resource://Psmb.Reveal/Private/Partials'
+
+		main = PrimaryContent {
+			renderByType {
+				condition = TRUE
+				type = ${q(node).property('_nodeType.name')}
+			}
+		}
+
+		javascripts.bodyScripts = TYPO3.TypoScript:Template {
+			templatePath = 'resource://Psmb.Reveal/Private/Partials/Resources.html'
+			partialRootPath = 'resource://Psmb.Reveal/Private/Partials'
+			sectionName = 'bodySection'
+            node = ${node}
+		}
+	}
+}
+
+root.fallbackPage {
+	condition = ${q(node).is('[instanceof Psmb.Reveal:Presentation]') || q(node).is('[instanceof Psmb.Reveal:Slide]')}
+	type = 'Psmb.Reveal:Root'
+}

@@ -1,7 +1,10 @@
 /Build/
 /Configuration/
 /Data/
-/Packages/*
+/Packages/Framework/
+/Packages/Libraries/
+/Packages/Application/*
+!/Packages/Application/Psmb.Reveal
 !/Packages/Sites/
 /Web/_Resources/
 /Web/index.php

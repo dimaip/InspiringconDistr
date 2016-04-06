@@ -1,0 +1,13 @@
+{
+    "name": "psmb/reveal",
+    "type": "typo3-flow-package",
+    "description": "Make slides with Revealjs",
+    "require": {
+        "typo3/flow": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Psmb\\Reveal": "Classes"
+        }
+    }
+}

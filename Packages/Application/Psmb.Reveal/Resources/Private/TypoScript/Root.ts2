@@ -9,6 +9,14 @@ prototype(Psmb.Reveal:Presentation) < prototype(TYPO3.TypoScript:Collection) {
     itemRenderer = Psmb.Reveal:Slide
     collection = ${q(site).find('[instanceof Psmb.Reveal:Slide]').get()}
     itemName = 'node'
+
+    @cache {
+        mode = 'cached'
+        entryTags {
+            1 = ${'Node_' + documentNode.identifier}
+            2 = ${'DescendantOf_' + documentNode.identifier}
+        }
+    }
 }
 
 prototype(Psmb.Reveal:Root) < prototype(TYPO3.Neos:Page) {

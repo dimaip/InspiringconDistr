@@ -6,4 +6,11 @@ prototype(Psmb.Reveal:Root){
             @position = 'after theme'
         }
     }
+    body {
+        javascripts.bodyScriptsBootstrap = TYPO3.TypoScript:Template {
+            templatePath = 'resource://Sfi.Site/Private/Partials/Resources.html'
+            sectionName = 'bodyScripts'
+            @position = 'after bodyScripts'
+        }
+    }
 }

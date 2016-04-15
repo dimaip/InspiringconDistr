@@ -1,40 +1,36 @@
 prototype(Psmb.Reveal:Slide) < prototype(TYPO3.TypoScript:Tag) {
-    tagName = 'section'
-    content = TYPO3.Neos:ContentCollection {
-        nodePath = 'main'
-    }
+	tagName = 'section'
+	content = TYPO3.Neos:ContentCollection {
+		nodePath = 'main'
+	}
 }
 
 prototype(Psmb.Reveal:Presentation) < prototype(TYPO3.TypoScript:Collection) {
-    itemRenderer = Psmb.Reveal:Slide
-    collection = ${q(site).find('[instanceof Psmb.Reveal:Slide]').get()}
-    itemName = 'node'
+	itemRenderer = Psmb.Reveal:Slide
+	collection = ${q(site).find('[instanceof Psmb.Reveal:Slide]').get()}
+	itemName = 'node'
 
-    @cache {
-        mode = 'cached'
-        entryTags {
-            1 = ${'Node_' + documentNode.identifier}
-            2 = ${'DescendantOf_' + documentNode.identifier}
-        }
-    }
+	@cache {
+		mode = 'cached'
+		entryTags {
+			1 = ${'Node_' + documentNode.identifier}
+			2 = ${'DescendantOf_' + documentNode.identifier}
+		}
+	}
 }
 
 prototype(Psmb.Reveal:Root) < prototype(TYPO3.Neos:Page) {
+  @context.presentationNode = ${q(node).is('[instanceof Psmb.Reveal:Presentation]') ? node : q(node).parents('[instanceof Psmb.Reveal:Presentation]').get(0)}
 	head {
 		stylesheets.reveal = TYPO3.TypoScript:Template {
 			templatePath = 'resource://Psmb.Reveal/Private/Partials/Resources.html'
 			sectionName = 'headSection'
 		}
-        stylesheets.theme = TYPO3.TypoScript:Tag {
-            tagName = 'link'
-            attributes {
-                rel = 'stylesheet'
-                href = TYPO3.TypoScript:ResourceUri {
-                    path = 'resource://Psmb.Reveal/Public/revealjs/css/theme/simple.css'
-                }
-            }
-            @position = 'after reveal'
-        }
+		stylesheets.theme = TYPO3.TypoScript:Tag {
+			tagName = 'style'
+      content = ${presentationNode.properties.themeCss}
+			@position = 'after reveal'
+		}
 	}
 	body {
 		templatePath = 'resource://Psmb.Reveal/Private/Templates/Root.html'
@@ -51,7 +47,7 @@ prototype(Psmb.Reveal:Root) < prototype(TYPO3.Neos:Page) {
 			templatePath = 'resource://Psmb.Reveal/Private/Partials/Resources.html'
 			partialRootPath = 'resource://Psmb.Reveal/Private/Partials'
 			sectionName = 'bodySection'
-            node = ${node}
+			node = ${node}
 		}
 	}
 }

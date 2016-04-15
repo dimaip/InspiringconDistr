@@ -1,1 +1,0 @@
-prototype(Psmb.Reveal:Root).head.stylesheets.theme.attributes.href.path = 'resource://Sfi.Site/Public/docker.css'

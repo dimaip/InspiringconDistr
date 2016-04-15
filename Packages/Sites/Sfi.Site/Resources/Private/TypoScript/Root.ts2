@@ -1,0 +1,9 @@
+prototype(Psmb.Reveal:Root){
+    head{
+        stylesheets.bootstrap = TYPO3.TypoScript:Tag {
+            templatePath = 'resource://Sfi.Site/Private/Partials/Resources.html'
+            sectionName = 'headSection'
+            @position = 'after theme'
+        }
+    }
+}

@@ -1,0 +1,17 @@
+##
+# Adjust the "TwoColumn" node type:
+# add new options for smaller autosized images
+#
+'TYPO3.Neos.NodeTypes:TwoColumn':
+  properties:
+    'layout':
+      defaultValue: '6-6'
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              '2-10':
+                label: '16% / 84%'
+            values:
+              '10-2':
+                label: '84% / 16%'

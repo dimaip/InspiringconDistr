@@ -3,7 +3,7 @@ prototype(Psmb.Reveal:Root){
         stylesheets.bootstrap = TYPO3.TypoScript:Template {
             templatePath = 'resource://Sfi.Site/Private/Partials/Resources.html'
             sectionName = 'headSection'
-            @position = 'after theme'
+            @position = 'before theme'
         }
     }
     body {
